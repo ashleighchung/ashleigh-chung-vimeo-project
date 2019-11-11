@@ -1,0 +1,27 @@
+$dark-grey: #272727;
+$white: white;
+$grey: #313030;
+
+.beams-background {
+    background-color: $grey;
+    padding-top: 130px;
+    padding-bottom:30px;
+}
+
+.beams-image {
+    float: left;
+}
+
+.beams-text {
+    padding-right: 40px;
+}
+
+.beams-title {
+    font-size: 20pt;
+    font-weight: 800;
+    color: $white;
+}
+
+.beams-paragraph {
+    color: $white;
+}
