@@ -3,6 +3,37 @@ $white: white;
 $grey: #313030;
 
 .background {
+    display: inline-flex;
+    width: 80%;
+}
+
+.paragraph {
+    //
+}
+
+.text {
+    text-align: left;
+    padding: 30px;
+}
+
+
+.monsoon-image {
+    padding: 30px;
+}
+
+
+.monsoon-title {
+    font-size: 20pt;
+    font-weight: 720;
+}
+
+.monsoon-paragraph {
+    color: $dark-grey;
+}
+
+
+
+/*.background {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,5 +72,6 @@ $grey: #313030;
 .monsoon-paragraph {
     color: $dark-grey;
 }
+*/
 
 
