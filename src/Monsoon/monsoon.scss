@@ -1,34 +1,43 @@
 $dark-grey: #272727;
 $white: white;
 $grey: #313030;
+$font-grey: #4B4B4B;
+
 
 .background {
     display: inline-flex;
-    width: 80%;
+    width: 75%;
+    min-width: 1071px;
 }
 
 .paragraph {
-    //
+    line-height: 1.2;
+    margin-top: 3px;
 }
 
 .text {
     text-align: left;
-    padding: 30px;
+    margin: auto;
+    padding: 20px;
 }
 
-
-.monsoon-image {
-    padding: 30px;
+.image {
+    padding: 20px;
 }
 
-
-.monsoon-title {
+.title {
     font-size: 20pt;
     font-weight: 720;
 }
 
+
 .monsoon-paragraph {
-    color: $dark-grey;
+    color: $font-grey; 
+}
+
+.monsoon-background {
+    margin-top: 150px;
+    margin-bottom: 140px;
 }
 
 
