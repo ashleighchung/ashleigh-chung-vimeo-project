@@ -11,7 +11,7 @@ function move2() {
   return (
     <div className = "move2-window">
       <div className="background move2-background">
-        <img className = "image" src = {Image} alt = "beams" />
+        <img className = "image" src = {Image} alt = "Move 2" />
         <div className = "text">
             <div className = "title move2-title">{text.title}</div>
             <p className = "paragraph beams-paragraph">{text.paragraph}</p>

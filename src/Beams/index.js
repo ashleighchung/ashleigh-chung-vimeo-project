@@ -15,7 +15,7 @@ function beams() {
             <div className = "title beams-title">{text.title}</div>
             <p className = "paragraph beams-paragraph">{text.paragraph}</p>
         </div>
-        <img className = "image" src = {Image} alt = "beams" />
+        <img className = "image" src = {Image} alt = "Beams" />
       </div>
     </div>
   );

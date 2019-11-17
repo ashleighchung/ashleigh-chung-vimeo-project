@@ -11,7 +11,7 @@ function monsoon() {
 
   return (
     <div className="background monsoon-background">
-      <img className="image" src={Image} alt="monsoon" />
+      <img className="image" src={Image} alt="Monsoon" />
       <div className="text">
         <div className="title">{text.title}</div>
         <p className="paragraph monsoon-paragraph">{text.paragraph}</p>

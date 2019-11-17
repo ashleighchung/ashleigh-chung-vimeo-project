@@ -1,0 +1,27 @@
+.movieBackground {
+    display: inline-flex;
+    width: 67%;
+    // background-image: url('./hunter.jpg');
+    // filter: blur(8px);
+    // -webkit-filter: blur(17px);
+}
+
+.moviePoster {
+    width: 333px;
+}
+
+.movieText {
+    text-align: left;
+    padding: 20px;
+}
+
+.movieTitle {
+    color: white;
+    font-size: 23pt;
+    font-weight: 550;
+}
+
+.movieDescription {
+    font-size: 18px;
+    color: #8D8D8D;
+}
