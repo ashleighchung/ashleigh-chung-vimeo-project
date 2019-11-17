@@ -1,23 +1,18 @@
-$dark-grey: #272727;
 $white: white;
 $grey: #313030;
+$font-grey: #4B4B4B;
+
+.beams-paragraph {
+    color: $font-grey; 
+}
 
 .beams-background {
-    background-color: $grey;
     padding-top: 130px;
-    padding-bottom:30px;
-}
-
-.beams-image {
-    float: left;
-}
-
-.beams-text {
-    padding-right: 40px;
+    padding-bottom: 10px;
+    //background-color: $grey;
 }
 
 .beams-title {
-    font-size: 20pt;
     font-weight: 800;
     color: $white;
 }
@@ -25,3 +20,31 @@ $grey: #313030;
 .beams-paragraph {
     color: $white;
 }
+
+.beams-window {
+    background-color: $grey;
+}
+
+// .beams-background {
+//     background-color: $grey;
+//     padding-top: 130px;
+//     padding-bottom:30px;
+// }
+
+// .beams-image {
+//     float: left;
+// }
+
+// .beams-text {
+//     padding-right: 40px;
+// }
+
+// .beams-title {
+//     font-size: 20pt;
+//     font-weight: 800;
+//     color: $white;
+// }
+
+// .beams-paragraph {
+//     color: $white;
+// }

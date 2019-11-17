@@ -1,0 +1,53 @@
+.background {
+    align-items: center;
+    display: inline-flex;
+    width: 79%;
+    min-width: 1137.59px;
+}
+
+.paragraph {
+    line-height: 1.2;
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+.text {
+    text-align: left;
+    padding: 20px;
+}
+
+.image {
+    padding: 20px;
+}
+
+.title {
+    font-size: 20pt;
+    font-weight: 720;
+}
+
+@media screen and (max-width: 1136px) {
+    .background {
+        min-width: 400px;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .image {
+        order: 2;
+        max-width: 100%;
+        padding: 50px;
+        width: 500px !important;
+    }
+
+    .text {
+        order: 1;
+        padding: 0px 150px 0px 150px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    .text {
+        padding: 5px;
+    }
+}

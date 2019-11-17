@@ -1,20 +1,21 @@
-$dark-grey: #272727;
 $white: white;
 $grey: #313030;
+$font-grey: #4B4B4B;
 
 .move2-background {
-    background-image: linear-gradient($grey, $white);
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 130px;
 }
 
-.move2-image {
-    float: left;
-    padding-right: 30px;
-}
-
 .move2-title {
-    font-size: 20pt;
     font-weight: 800;
     color: $white;
+}
+
+.move2-paragraph {
+    color: $white;
+}
+
+.move2-window {
+    background-image: linear-gradient($grey, $white);
 }

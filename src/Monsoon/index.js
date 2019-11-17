@@ -1,37 +1,24 @@
 import React from 'react';
 import './monsoon.scss';
 import Image from './monsoon.jpg';
+import '../index.scss';
 
 function monsoon() {
+  const text = {
+    title: "MONSOON III",
+    paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Donec tincidunt ipsum augue.  In faucibus vehicula magna pulvinar aliquam. Cras aliquam feugiat lorem non auctor. Quisque sed lorem egestas mauris venenatis commodo eu id nibh. Ut porta libero sed semper faucibus."
+  }
+
   return (
     <div className="background monsoon-background">
-        <img className = "image" src = {Image} alt = "monsoon" />
-        <div className = "text">
-            <text className = "title">MONSOON III</text>
-            <p className = "paragraph monsoon-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non vestibulum lacus. Mauris et interdum lectus. Aenean a erat at metus ultrices cursus et non quam. Morbi egestas euismod sapien et ultrices. Sed ac massa condimentum, suscipit mi vitae, facilisis turpis. </p>
-        </div>
-    </div>
-  );
-}
-
-export default monsoon;
-
-
-/*import React from 'react';
-import './monsoon.scss';
-import Image from './monsoon.jpg';
-
-function monsoon() {
-  return (
-    <div className="background monsoon-background">
-      <img className = "monsoon-image" src = {Image} alt = "monsoon" />
-      <div className = "text">
-          <text className = "monsoon-title">MONSOON III</text>
-          <p className = "paragraph monsoon-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non vestibulum lacus. Mauris et interdum lectus. Aenean a erat at metus ultrices cursus et non quam. Morbi egestas euismod sapien et ultrices. Sed ac massa condimentum, suscipit mi vitae, facilisis turpis. </p>
+      <img className="image" src={Image} alt="monsoon" />
+      <div className="text">
+        <div className="title">{text.title}</div>
+        <p className="paragraph monsoon-paragraph">{text.paragraph}</p>
       </div>
     </div>
   );
 }
 
 export default monsoon;
-*/
+
