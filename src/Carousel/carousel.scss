@@ -1,18 +1,31 @@
-.movieBackground {
+
+
+.carouselBackgroundWrapper {
+    background-color: purple;
+    padding-top: 70px;
+    padding-bottom: 100px;
     display: inline-flex;
-    width: 67%;
+    align-items: center;
+    justify-content: center;
     // background-image: url('./hunter.jpg');
     // filter: blur(8px);
     // -webkit-filter: blur(17px);
 }
 
+.carouselBackground {
+    display: inline-flex;
+    width: 67%;
+}
+
 .moviePoster {
-    width: 333px;
+    width: 300px;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
 }
 
 .movieText {
     text-align: left;
-    padding: 20px;
+    padding: 50px;
 }
 
 .movieTitle {
@@ -23,5 +36,51 @@
 
 .movieDescription {
     font-size: 18px;
+    padding-bottom: 10px;
     color: #8D8D8D;
+}
+
+.buttonWrapper {
+    display: inline-flex;
+}
+
+.buyNow {
+    margin-right: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: #47B2FF;
+    border-width: 0px;
+    color: white;
+    font-size: 11pt;
+    font-weight: 800;
+    border-radius: 5px;
+    align-items: center;
+    display: inline-flex;
+}
+
+.watchTrailer {
+    background: transparent;
+    border-color: #8D8D8D;
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-size: 11pt;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.buttonArrow {
+    padding-right: 7px;
+    font-size: 25px;
+}
+
+.swipeButton {
+    background: transparent;
+    display: inline-flex;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    border-color: transparent;
+    color: white;
+    font-size: 70px;
 }

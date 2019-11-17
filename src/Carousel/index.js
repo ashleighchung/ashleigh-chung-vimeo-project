@@ -8,7 +8,6 @@ import Moon from './full_moon.jpg';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
-
 function Carousel() {
   const movie = [
     {
@@ -44,13 +43,12 @@ function Carousel() {
     console.log("initial state", movieIndex);
     const LeftArrow = () => {
         return (
-            <button onClick = {() => {
+            <button className = "swipeButton" onClick = {() => {
                 if(movieIndex === 0)
                     setMovieIndex(arrayLength - 1);
                 else
                     setMovieIndex(movieIndex - 1);
                 console.log("left clicked", movieIndex);
-
             }}>
             <IoIosArrowBack />
             </button>
@@ -59,13 +57,12 @@ function Carousel() {
 
     const RightArrow = () => {
         return (
-            <button onClick = {() => {
+            <button className = "swipeButton" onClick = {() => {
                 if(movieIndex === arrayLength - 1)
                     setMovieIndex(0);
                 else
                     setMovieIndex(movieIndex + 1);
                 console.log("right clicked", movieIndex);
-
             }}>
             <IoIosArrowForward />
             </button>
@@ -74,13 +71,17 @@ function Carousel() {
 
     const CarouselItem = ({movie}) => {
         return (
-            <div className = "movieBackground"> 
+            <div className = "carouselBackground">
                 <div className = "posterWrapper">
                     <img className = "moviePoster" src = {movie.moviePoster} alt = "Movie Poster" />
                 </div>
                 <div className = "movieText">
                     <div className = "movieTitle">{movie.movieTitle}</div>
                     <p className = "movieDescription">{movie.movieDescription}</p>
+                    <div className = "buttonWrapper">
+                        <button className = "buyNow"><IoIosArrowForward className = "buttonArrow"/>Buy Now</button>
+                        <button className = "watchTrailer">Watch Trailer</button>
+                    </div>
                 </div>
             </div>
         );
@@ -88,9 +89,11 @@ function Carousel() {
 
   return (
         <Fragment>
-            <LeftArrow />
-            <CarouselItem movie = {movie[movieIndex]} />
-            <RightArrow />
+            <div className = "carouselBackgroundWrapper">
+                <LeftArrow />
+                <CarouselItem movie = {movie[movieIndex]} />
+                <RightArrow />
+            </div>
         </Fragment>
   );
 }
