@@ -88,7 +88,7 @@ function Carousel() {
     }
 
   return (
-        <Fragment>
+        <Fragment >
             <div className = "carouselBackgroundWrapper">
                 <LeftArrow />
                 <CarouselItem movie = {movie[movieIndex]} />

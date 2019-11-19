@@ -1,13 +1,16 @@
-
+$Hunter: './hunter.jpg';
+$Fourth: './fourth_phase.jpg';
+$Nicht: './nicht.jpg';
+$Vice: './vice_versa.png';
+$Moon: './full_moon.jpg';
 
 .carouselBackgroundWrapper {
     background-color: purple;
     padding-top: 70px;
     padding-bottom: 100px;
     display: inline-flex;
-    align-items: center;
     justify-content: center;
-    // background-image: url('./hunter.jpg');
+    background-image: url($Hunter);
     // filter: blur(8px);
     // -webkit-filter: blur(17px);
 }
@@ -81,6 +84,21 @@
     width: 70px;
     height: 70px;
     border-color: transparent;
-    color: white;
+    color: #8D8D8D;
     font-size: 70px;
+    cursor: pointer;
+    margin-top: 10%;
 }
+
+.swipeButton:hover {
+    color: #6AC9FF;
+}
+
+.swipeButton:active {
+    border-color: black;
+} 
+
+.swipeButton:focus {
+    color: #6AC9FF;
+}
+    
