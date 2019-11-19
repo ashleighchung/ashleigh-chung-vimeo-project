@@ -5,12 +5,12 @@ $Vice: './vice_versa.png';
 $Moon: './full_moon.jpg';
 
 .carouselBackgroundWrapper {
-    background-color: purple;
     padding-top: 70px;
     padding-bottom: 100px;
     display: inline-flex;
     justify-content: center;
-    background-image: url($Hunter);
+    background-color: rgb(227, 206, 163);
+    //background-image: url($Hunter);
     // filter: blur(8px);
     // -webkit-filter: blur(17px);
 }
@@ -87,7 +87,7 @@ $Moon: './full_moon.jpg';
     color: #8D8D8D;
     font-size: 70px;
     cursor: pointer;
-    margin-top: 10%;
+    margin-top: 120px;
 }
 
 .swipeButton:hover {
@@ -100,5 +100,12 @@ $Moon: './full_moon.jpg';
 
 .swipeButton:focus {
     color: #6AC9FF;
+}
+
+@media screen and (max-width: 1074px) { 
+    .carouselBackground {
+        flex-direction: column;
+        width: 67%;
+    }
 }
     
