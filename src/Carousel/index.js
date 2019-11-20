@@ -89,10 +89,18 @@ function Carousel() {
 
   return (
         <Fragment >
-            <div className = "carouselBackgroundWrapper">
-                <LeftArrow />
-                <CarouselItem movie = {movie[movieIndex]} />
-                <RightArrow />
+            <div>
+                <div className = "imageWrapper">
+                    <img className = "carouselWallpaper" src = {movie[movieIndex].moviePoster} alt = "Carousel Background" />
+                </div>
+
+                {/* <img className = "carouselWallpaper" style = {{background: url(Fourth)}} /> */}
+
+                <div className = "carousel">
+                        <LeftArrow />
+                        <CarouselItem movie = {movie[movieIndex]} />
+                        <RightArrow />
+                </div>
             </div>
         </Fragment>
   );
