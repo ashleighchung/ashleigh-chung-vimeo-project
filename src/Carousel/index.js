@@ -94,8 +94,6 @@ function Carousel() {
         <Fragment >
             <div>
                 <div className = "carouselWrapper"></div>
-
-                {/* <img className = "carouselWallpaper" style = {{background: url(Fourth)}} /> */}
                 <div className = "colorOverlay"></div>
                 <div className = "carousel">
                         <LeftArrow />

@@ -4,6 +4,12 @@ $Nicht: './nicht.jpg';
 $Vice: './vice_versa.png';
 $Moon: './full_moon.jpg';
 
+// 1st: #319de4;
+// 2nd: #0fb5ee;
+// 3rd: #b5ae5e;
+// 4th: #3177aa;
+// 5th: #858485;
+
 .carousel{
     padding-top: 70px;
     padding-bottom: 100px;
@@ -14,47 +20,31 @@ $Moon: './full_moon.jpg';
     left: 0;
     z-index: 3;
 }
+
 .colorOverlay {
-    background-color: blue;
-    opacity: 0.2;
+    background-color: #319de4;
+    opacity: 0.3;
     position: absolute;
     top: 1000;
     left: 0;
     z-index: 2;
-    height: 500px !important;
+    height: 600px !important;
     width: 100%;
+    filter: blur(20px);
 }
+
 .carouselWrapper {
     background-image: url($Hunter);
     background-size: 100%;
     background-position: 50% 55%; 
-    height: 500px;
+    height: 580px;
     width: 100%;
     position: absolute;
     top: 1000;
     left: 0;
-    filter: blur(15px) brightness(0.5);
+    filter: blur(20px) brightness(0.4);
     z-index: 1;
-
-
-
-}
-
-// .imageWrapper {
-//     max-height: 480px;
-//     overflow: hidden; 
-// }
-
-.carouselWallpaper {
-    // background-image: url($Hunter);
-    // background-size: 100%;
-    // background-position: 50% 55%; 
-    // -webkit-filter: blur(17px);
-    //position: absolute;
-    // clip: rect(300px, 5000px, 760px, 0px);
-
-    // width: 100%;
-    
+    transform: scale(1.05);
 }
 
 .carouselBackground {
@@ -82,7 +72,7 @@ $Moon: './full_moon.jpg';
 .movieDescription {
     font-size: 18px;
     padding-bottom: 10px;
-    color: #8D8D8D;
+    color: #a7bcd0;
 }
 
 .buttonWrapper {
@@ -105,7 +95,7 @@ $Moon: './full_moon.jpg';
 
 .watchTrailer {
     background: transparent;
-    border-color: #8D8D8D;
+    border-color: #a7bcd0;
     width: 120px;
     height: 40px;
     color: white;
@@ -129,7 +119,11 @@ $Moon: './full_moon.jpg';
     color: #8D8D8D;
     font-size: 70px;
     cursor: pointer;
-    margin-top: 120px;
+    margin-top: 120px;  
+}
+
+.swipeButton:focus {
+    outline:0;
 }
 
 .swipeButton:hover {
@@ -140,14 +134,34 @@ $Moon: './full_moon.jpg';
     border-color: black;
 } 
 
-.swipeButton:focus {
-    color: #6AC9FF;
-}
+.swipeButton:disabled {
+    border-color: #6AC9FF;
+} 
 
 @media screen and (max-width: 1074px) { 
     .carouselBackground {
         flex-direction: column;
         width: 67%;
     }
+
+    .carouselWrapper {
+        height: 850px;
+    }
+
+    .colorOverlay {
+        height: 850px !important;
+    }
 }
+
+@media screen and (max-width: 696px) { 
+    .carouselWrapper {
+        height: 900px;
+        transform: scale(1.08);
+    }
+
+    .colorOverlay {
+        height: 900px !important;
+    }
+}
+
     
