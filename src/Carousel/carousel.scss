@@ -1,14 +1,23 @@
-$Hunter: './hunter.jpg';
-$Fourth: './fourth_phase.jpg';
-$Nicht: './nicht.jpg';
-$Vice: './vice_versa.png';
-$Moon: './full_moon.jpg';
+$HuntForTheWilderPeople: './hunter.jpg';
+$NichtsPassiert: './nicht.jpg';
+$ViceVersa: './vice_versa.png';
+$TheFourthPhase: './fourth_phase.jpg';
+$FullMoon: './full_moon.jpg';
 
-// 1st: #319de4;
-// 2nd: #0fb5ee;
-// 3rd: #b5ae5e;
-// 4th: #3177aa;
-// 5th: #858485;
+
+// .leftMovie {
+//     transform: translateX(-100);
+//     display: none;
+// }
+
+// .rightMovie {
+//     transform: translateX(100);
+//     display: none;
+// }
+
+// .currentMovie {
+//     transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+// }
 
 .carousel{
     padding-top: 70px;
@@ -22,32 +31,66 @@ $Moon: './full_moon.jpg';
 }
 
 .colorOverlay {
-    background-color: #319de4;
     opacity: 0.3;
     position: absolute;
-    top: 1000;
-    left: 0;
     z-index: 2;
     height: 600px !important;
     width: 100%;
     filter: blur(20px);
 }
 
-.carouselWrapper {
-    background-image: url($Hunter);
+.HuntForTheWilderPeopleColorOverlay {
+    background-color: #319de4;
+}
+
+.NichtsPassiertColorOverlay {
+    background-color: #0fb5ee;
+}
+
+.ViceVersaColorOverlay {
+    background-color: #b5ae5e;
+}
+
+.TheFourthPhaseColorOverlay {
+    background-color: #3177aa;
+}
+
+.FullMoonColorOverlay {
+    background-color: #858485;
+}
+
+.wallpaper {
     background-size: 100%;
     background-position: 50% 55%; 
     height: 580px;
     width: 100%;
     position: absolute;
-    top: 1000;
-    left: 0;
     filter: blur(20px) brightness(0.4);
     z-index: 1;
     transform: scale(1.05);
 }
 
-.carouselBackground {
+.HuntForTheWilderPeopleWallpaper {
+    background-image: url($HuntForTheWilderPeople);
+}
+
+.NichtsPassiertWallpaper {
+    background-image: url($NichtsPassiert);
+}
+
+.ViceVersaWallpaper {
+    background-image: url($ViceVersa);
+}
+
+.TheFourthPhaseWallpaper {
+    background-image: url($TheFourthPhase);
+}
+
+.FullMoonWallpaper {
+    background-image: url($FullMoon);
+}
+
+.carouselWrapper {
     display: inline-flex;
     width: 67%;
 }
@@ -79,11 +122,10 @@ $Moon: './full_moon.jpg';
     display: inline-flex;
 }
 
-.buyNow {
+.buyNowButton {
     margin-right: 10px;
     width: 120px;
     height: 40px;
-    background-color: #47B2FF;
     border-width: 0px;
     color: white;
     font-size: 11pt;
@@ -93,7 +135,27 @@ $Moon: './full_moon.jpg';
     display: inline-flex;
 }
 
-.watchTrailer {
+.HuntForTheWilderPeopleBuyNowButton {
+    background-color: #319de4;
+}
+
+.NichtsPassiertBuyNowButton {
+    background-color: #0fb5ee;
+}
+
+.ViceVersaBuyNowButton {
+    background-color: #b5ae5e;
+}
+
+.TheFourthPhaseBuyNowButton {
+    background-color: #3177aa;
+}
+
+.FullMoonBuyNowButton {
+    background-color: #858485;
+}
+
+.watchTrailerButton {
     background: transparent;
     border-color: #a7bcd0;
     width: 120px;
@@ -109,7 +171,7 @@ $Moon: './full_moon.jpg';
     font-size: 25px;
 }
 
-.swipeButton {
+.sideButton {
     background: transparent;
     display: inline-flex;
     border-radius: 100%;
@@ -122,29 +184,25 @@ $Moon: './full_moon.jpg';
     margin-top: 120px;  
 }
 
-.swipeButton:focus {
+.sideButton:focus {
     outline:0;
 }
 
-.swipeButton:hover {
+.sideButton:hover {
     color: #6AC9FF;
 }
 
-.swipeButton:active {
+.sideButton:active {
     border-color: black;
 } 
 
-.swipeButton:disabled {
-    border-color: #6AC9FF;
-} 
-
 @media screen and (max-width: 1074px) { 
-    .carouselBackground {
+    .carouselWrapper {
         flex-direction: column;
         width: 67%;
     }
 
-    .carouselWrapper {
+    .wallpaper {
         height: 850px;
     }
 
@@ -154,7 +212,7 @@ $Moon: './full_moon.jpg';
 }
 
 @media screen and (max-width: 696px) { 
-    .carouselWrapper {
+    .wallpaper {
         height: 900px;
         transform: scale(1.08);
     }
