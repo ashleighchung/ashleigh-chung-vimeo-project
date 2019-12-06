@@ -1,15 +1,14 @@
-$white: white;
-$grey: #313030;
-$font-grey: #4B4B4B;
+@import '../colors.scss';
 
-.beams-paragraph {
-    color: $font-grey; 
+/* ALL PROPERTIES UNIQUE TO BEAMS */
+
+.beams-window {
+    background-color: $grey;
 }
 
 .beams-background {
     padding-top: 130px;
     padding-bottom: 10px;
-    //background-color: $grey;
 }
 
 .beams-title {
@@ -21,7 +20,4 @@ $font-grey: #4B4B4B;
     color: $white;
 }
 
-.beams-window {
-    background-color: $grey;
-}
 

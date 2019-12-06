@@ -2,8 +2,6 @@ import React, {Fragment, useState}from 'react';
 import classNames from 'classnames';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import { slideInLeft } from 'react-animations';
-import styled, { keyframes } from 'styled-components'
 
 import HuntForTheWilderPeople from './hunter.jpg';
 import NichtsPassiert from './nicht.jpg';
@@ -13,8 +11,8 @@ import FullMoon from './full_moon.jpg';
 
 import './carousel.scss';
 
+/* ARRAY OF ALL MOVIES (PLUS THEIR PROPERTIES) IN CAROUSEL */
 function Carousel() {
-
     const movies = [
         {
             movieTitle: "Hunt for the Wilderpeople",
@@ -49,15 +47,19 @@ function Carousel() {
     ]
 
     const arrayLength = movies.length;
-    const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
-    // const SlideInLeft = styled.div`animation: 2s ${keyframes`${slideInLeft}`} infinite`;
 
+    /* STATE HOOK THAT SETS THE DEFAULT MOVIE TO INDEX 0 AND ALLOWS THE STATE OF THE CAROUSEL TO BE DETERMINDED BY THE CURRENTMOVIEINDEX */
+    const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
+    
+    /* CONSTS USED FOR DYNAMIC WALLPAPERS/COLOR OVERLAYS/BUTTON COLORS FOR EACH MOVIE */
     const getWallpaper = (n) => classNames("wallpaper", `${n}Wallpaper`);
     const getColorOverlay = (n) => classNames("colorOverlay", `${n}ColorOverlay`);
     const getBuyNowButton = (n) => classNames("buyNowButton", `${n}BuyNowButton`);
 
+    /* FUNCTIONALITY OF LEFT SIDE ARROW */
     const LeftArrow = () => {
         return (
+            /* ONCLICK ALLOWS DECREMENTATION OF CURRENTMOVIEINDEX */
             <button className = "sideButton" onClick = {() => {
                 if(currentMovieIndex === 0)
                     setCurrentMovieIndex(arrayLength - 1);
@@ -69,8 +71,10 @@ function Carousel() {
         ); 
     }
 
+    /* FUNCTIONALITY OF RIGHT SIDE ARROW */
     const RightArrow = () => {
         return (
+            /* ONCLICK ALLOWS INCREMENTATION OF CURRENTMOVIEINDEX */
             <button className = "sideButton" onClick = {() => {
                 if(currentMovieIndex === arrayLength - 1)
                     setCurrentMovieIndex(0);
@@ -82,12 +86,11 @@ function Carousel() {
         );
     }
 
+    /* ACTUAL CONTENT OF CAROUSEL USING DYNAMIC DATA FROM MOVIE ARRAY DEPENDING ON CURRENTMOVIEINDEX*/
     const CarouselItem = ({currentMovie}) => {
         return (
             <div className = "carouselWrapper">
-                <div>
-                    <img className = "moviePoster" src = {currentMovie.moviePoster} alt = "Movie Poster" />
-                </div>
+                <div><img className = "moviePoster" src = {currentMovie.moviePoster} alt = "Movie Poster" /></div>
                 <div className = "movieText">
                     <div className = "movieTitle">{currentMovie.movieTitle}</div>
                     <p className = "movieDescription">{currentMovie.movieDescription}</p>
@@ -102,20 +105,20 @@ function Carousel() {
 
     return (
         <Fragment >
-                <div className = {getWallpaper(movies[currentMovieIndex].movieStyleName)}></div>
-                <div className = {getColorOverlay(movies[currentMovieIndex].movieStyleName)} />
+            {/* WALLPAPER AND COLOR TINT FOR EACH SLIDE */}
+            <div className = {getWallpaper(movies[currentMovieIndex].movieStyleName)}></div> 
+            <div className = {getColorOverlay(movies[currentMovieIndex].movieStyleName)} />
 
-                <div className = "carousel">
-                    <LeftArrow />
-                    {/* <div className = "leftMovie"><CarouselItem currentMovie = {movies[currentMovieIndex - 1 === -1 ? arrayLength - 1 : currentMovieIndex - 1]} /></div> */}
-                    {/* <div className = "currentMovie"> */}
-                        <CarouselItem currentMovie = {movies[currentMovieIndex]} />
-                    {/* </div> */}
-                    {/* <div className = "rightMovie"><CarouselItem  currentMovie = {movies[currentMovieIndex + 1 === arrayLength ? 0 : currentMovieIndex + 1]} /></div> */}
-                    <RightArrow />
-                </div>
+            {/* ACTUAL CONTENT OF CAROUSEL */}
+            <div className = "carousel">
+                <LeftArrow />
+                <CarouselItem currentMovie = {movies[currentMovieIndex]} />
+                <RightArrow />
+            </div>
         </Fragment>
     );
 }
 
 export default Carousel;
+
+

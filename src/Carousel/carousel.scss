@@ -4,60 +4,7 @@ $ViceVersa: './vice_versa.png';
 $TheFourthPhase: './fourth_phase.jpg';
 $FullMoon: './full_moon.jpg';
 
-
-// .leftMovie {
-//     transform: translateX(-100);
-//     display: none;
-// }
-
-// .rightMovie {
-//     transform: translateX(100);
-//     display: none;
-// }
-
-// .currentMovie {
-//     transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-// }
-
-.carousel{
-    padding-top: 70px;
-    padding-bottom: 100px;
-    display: inline-flex;
-    justify-content: center;
-    position: absolute;
-    top: 1000;
-    left: 0;
-    z-index: 3;
-}
-
-.colorOverlay {
-    opacity: 0.3;
-    position: absolute;
-    z-index: 2;
-    height: 600px !important;
-    width: 100%;
-    filter: blur(20px);
-}
-
-.HuntForTheWilderPeopleColorOverlay {
-    background-color: #319de4;
-}
-
-.NichtsPassiertColorOverlay {
-    background-color: #0fb5ee;
-}
-
-.ViceVersaColorOverlay {
-    background-color: #b5ae5e;
-}
-
-.TheFourthPhaseColorOverlay {
-    background-color: #3177aa;
-}
-
-.FullMoonColorOverlay {
-    background-color: #858485;
-}
+/* MOVIE POSTER WALLPAPER FOR CAROUSEL */
 
 .wallpaper {
     background-size: 100%;
@@ -90,6 +37,50 @@ $FullMoon: './full_moon.jpg';
     background-image: url($FullMoon);
 }
 
+/* COLOR TINT OVERLAY FOR EACH MOVIE POSTER WALLPAPER */
+
+.colorOverlay {
+    opacity: 0.3;
+    position: absolute;
+    z-index: 2;
+    height: 600px !important;
+    width: 100%;
+    filter: blur(20px);
+}
+
+.HuntForTheWilderPeopleColorOverlay {
+    background-color: #319de4;
+}
+
+.NichtsPassiertColorOverlay {
+    background-color: #0fb5ee;
+}
+
+.ViceVersaColorOverlay {
+    background-color: #b5ae5e;
+}
+
+.TheFourthPhaseColorOverlay {
+    background-color: #3177aa;
+}
+
+.FullMoonColorOverlay {
+    background-color: #858485;
+}
+
+/* ACTUAL CONTENT OF CAROUSEL */
+
+.carousel{
+    padding-top: 70px;
+    padding-bottom: 100px;
+    display: inline-flex;
+    justify-content: center;
+    position: absolute;
+    top: 1000;
+    left: 0;
+    z-index: 3;
+}
+
 .carouselWrapper {
     display: inline-flex;
     width: 67%;
@@ -98,7 +89,7 @@ $FullMoon: './full_moon.jpg';
 .moviePoster {
     width: 300px;
     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
 }
 
 .movieText {
@@ -117,6 +108,8 @@ $FullMoon: './full_moon.jpg';
     padding-bottom: 10px;
     color: #a7bcd0;
 }
+
+/* BUYNOW BUTTON & WATCHTRAILER BUTTON */
 
 .buttonWrapper {
     display: inline-flex;
@@ -171,6 +164,8 @@ $FullMoon: './full_moon.jpg';
     font-size: 25px;
 }
 
+/* THE LEFT AND RIGHT ARROWS OF THE CAROUSEL */
+
 .sideButton {
     background: transparent;
     display: inline-flex;
@@ -195,6 +190,8 @@ $FullMoon: './full_moon.jpg';
 .sideButton:active {
     border-color: black;
 } 
+
+/* RESPONSIVE PROPERTIES FOR DIFFERENT SCREEN WIDTHS */
 
 @media screen and (max-width: 1074px) { 
     .carouselWrapper {
