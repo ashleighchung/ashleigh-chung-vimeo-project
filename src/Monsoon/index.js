@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment }from 'react';
 import Image from './monsoon.jpg';
 
 import '../index.scss';
@@ -14,13 +14,17 @@ function monsoon() {
 
   /* IMPLEMENTATION OF TEXT CONTENT AND STRUCTURE OF COMPONENT */
   return (
-    <div className="background monsoon-background">
-      <img className="image" src={Image} alt="Monsoon" />
-      <div className="text">
-        <div className="title monsoon-title">{text.title}</div>
-        <p className="paragraph monsoon-paragraph">{text.paragraph}</p>
+    <Fragment>
+      <div className="background monsoon-background">
+        <div id="Monsoon III (4K)"></div>
+        <iframe src="https://player.vimeo.com/video/185441790" className="movie" frameborder="0"></iframe>
+        {/* <img className="image" src={Image} alt="Monsoon" /> */}
+        <div className="text">
+          <div className="title monsoon-title">{text.title}</div>
+          <p className="paragraph monsoon-paragraph">{text.paragraph}</p>
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 }
 

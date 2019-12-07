@@ -19,30 +19,40 @@ function Carousel() {
             movieDescription: "Raised on hip-hop and foster care, defiant city kid Ricky gets a fresh start in the New Zealand countryside. From the director of What We Do In The Shadows.",
             moviePoster: HuntForTheWilderPeople,
             movieStyleName: "HuntForTheWilderPeople",
+            movieTrailer: "https://player.vimeo.com/video/182894323",
+            movieBuyLink: "https://vimeo.com/ondemand/huntforthewilderpeople",
         },
         {
             movieTitle: "Nichts passiert / A Decent Man",
             movieDescription: "A Swiss family takes a ski vacation and runs into trouble when the father, the titular decent man, finds himself in a series of moral quandaries.",
             moviePoster: NichtsPassiert,
             movieStyleName: "NichtsPassiert",
+            movieTrailer: "https://player.vimeo.com/video/369732210",
+            movieBuyLink: "https://vimeo.com/ondemand/nichtspassiertadecentman",
         },
         {
             movieTitle: "Vice Versa",
             movieDescription: "Come along with the Good Company crew as they travel throughout the US, Japan, BC and Quebec to showcase skiing in the best way possible.",
             moviePoster: ViceVersa,
             movieStyleName: "ViceVersa",
+            movieTrailer: "https://player.vimeo.com/video/180836160",
+            movieBuyLink: "https://vimeo.com/ondemand/viceversafilm",
         },
         {
             movieTitle: "The Fourth Phase",
             movieDescription: "From the creators of The Art of FLIGHT, Red Bull Media House presents THE FOURTH PHASE, a snowboarding epic starring iconic athlete Travis Rice.",
             moviePoster: TheFourthPhase,
             movieStyleName: "TheFourthPhase",
+            movieTrailer: "https://player.vimeo.com/video/182511910",
+            movieBuyLink: "https://vimeo.com/ondemand/thefourthphase",
         },
         {
             movieTitle: "Full Moon",
             movieDescription: "Be inspired by women who push boundaries. FULL MOON showcases the legends, current icons and future prodigies of this ever-evolving lifestyle sport.",
             moviePoster: FullMoon,
             movieStyleName: "FullMoon",
+            movieTrailer: "https://player.vimeo.com/video/180790969",
+            movieBuyLink: "https://vimeo.com/ondemand/fullmoonsnowboard",
         }
     ]
 
@@ -95,8 +105,8 @@ function Carousel() {
                     <div className = "movieTitle">{currentMovie.movieTitle}</div>
                     <p className = "movieDescription">{currentMovie.movieDescription}</p>
                     <div className = "buttonWrapper">
-                        <button className = {getBuyNowButton(currentMovie.movieStyleName)}><IoIosArrowForward className = "buttonArrow"/>Buy Now</button>
-                        <button className = "watchTrailerButton">Watch Trailer</button>
+                        <a href = {movies[currentMovieIndex].movieBuyLink} className = "buyNowLink"><button className = {getBuyNowButton(currentMovie.movieStyleName)}><IoIosArrowForward className = "buttonArrow"/>Buy Now</button></a>
+                        <a href = {movies[currentMovieIndex].movieTrailer}><button className = "watchTrailerButton">Watch Trailer</button></a>
                     </div>
                 </div>
             </div>

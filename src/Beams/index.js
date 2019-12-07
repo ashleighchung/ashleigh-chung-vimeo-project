@@ -20,7 +20,8 @@ function beams() {
             <div className = "title beams-title">{text.title}</div>
             <p className = "paragraph beams-paragraph">{text.paragraph}</p>
         </div>
-        <img className = "image" src = {Image} alt = "Beams" />
+        <iframe src="https://player.vimeo.com/video/129902448" className="movie" frameborder="0"></iframe>
+        {/* <img className = "image" src = {Image} alt = "Beams" /> */}
       </div>
     </div>
   );

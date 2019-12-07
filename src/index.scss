@@ -26,6 +26,12 @@
     padding: 20px;
 }
 
+.movie {
+    padding-right: 20px;
+    height: 330px;
+    min-width: 48%;
+}
+
 /* RESPONSIVE PROPERTIES DEPENDING ON SCREEN WIDTH */
 
 @media screen and (max-width: 1136px) {
@@ -47,10 +53,23 @@
         padding: 0px 150px 0px 150px;
         margin: 0px;
     }
+
+    .movie {
+        order: 2;
+        height: 300px;
+        padding: 50px;
+        width: 500px !important;
+    }
 }
 
 @media screen and (max-width: 800px) { 
     .text {
         padding: 5px;
+    }
+
+    .movie {
+        width: 450px !important;
+        height: 260px;
+        padding: 30px;
     }
 }
